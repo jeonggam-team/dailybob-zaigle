@@ -93,6 +93,14 @@ img { display: block; max-width: 100%; }
 .hero-compact .hero-title { font-size: 20px; }
 .hero-compact .hero-desc { font-size: 14px; margin-top: 8px; }
 
+/* 완료 페이지 히어로 — 문구를 배너 세로 중앙에 배치 (가운데 정렬) */
+#page-complete .hero-overlay {
+  top: 0; bottom: 0;
+  justify-content: center;
+  padding: 22px;
+  background: linear-gradient(180deg, rgba(0,0,0,.5) 0%, rgba(0,0,0,.4) 100%);
+}
+
 /* ===================== Section common ===================== */
 .sec-eyebrow {
   text-align: center; color: var(--zg-red);
