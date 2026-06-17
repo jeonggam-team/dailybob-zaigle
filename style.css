@@ -194,6 +194,16 @@ img { display: block; max-width: 100%; }
   padding: 4px 10px; border-radius: 999px;
 }
 .pp-image { background: #f7f8f9; }
+/* 제품별 테마 그라데이션 (배지 색 계열의 은은한 방사형 스포트라이트) */
+.product-panel[data-product="0"] .pp-image {
+  background: radial-gradient(120% 90% at 50% 28%, #ffffff 0%, #fdeaec 58%, #f7d7db 100%);
+}
+.product-panel[data-product="1"] .pp-image {
+  background: radial-gradient(120% 90% at 50% 28%, #ffffff 0%, #fff1e6 58%, #ffdfc6 100%);
+}
+.product-panel[data-product="2"] .pp-image {
+  background: radial-gradient(120% 90% at 50% 28%, #ffffff 0%, #fdeef4 58%, #f9dbe8 100%);
+}
 .pp-image img { width: 100%; height: 240px; object-fit: contain; padding: 16px; -webkit-user-drag: none; user-drag: none; pointer-events: none; }
 .pp-image .img-fallback { height: 240px; }
 
@@ -300,10 +310,27 @@ img { display: block; max-width: 100%; }
 /* ===================== Footer ===================== */
 .site-footer {
   margin-top: auto;
-  padding: 26px 20px 32px; background: #2a2d30; color: #b9bdc2;
+  padding: 28px 20px 34px; background: #2a2d30; color: #b9bdc2;
+  text-align: center;
 }
-.ft-company { font-size: 14px; font-weight: 800; color: #fff; margin-bottom: 10px; }
-.ft-line { font-size: 14px; line-height: 1.7; }
+/* 브랜드 + 짧은 언더라인 디바이더 */
+.ft-top {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding-bottom: 14px; margin-bottom: 14px;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+}
+.ft-mark {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--zg-red); box-shadow: 0 0 0 3px rgba(202,16,30,.2);
+}
+.ft-company { font-size: 15px; font-weight: 800; color: #fff; letter-spacing: .3px; }
+/* 사업자정보 — 가운데점으로 구분, 좁으면 줄바꿈 */
+.ft-meta {
+  display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+  gap: 8px; font-size: 13px;
+}
+.ft-sep { opacity: .4; }
+.ft-addr { margin-top: 8px; font-size: 13px; line-height: 1.7; color: #9aa0a6; }
 
 /* ===================== Form ===================== */
 .form-selected-product {
