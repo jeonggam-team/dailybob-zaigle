@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+# Editor (선택) — 공유가 필요하면 이 줄을 지우세요
+.vscode/
